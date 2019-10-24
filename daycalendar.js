@@ -14,13 +14,22 @@ $(document).ready(function(){
             - input text with text area for
             - addon button append to input text area
 - CSS stylesheet
+    - create color classes: 
+        .past {
+            background color: gray;
+        }
+        .present {
+            background color: red;
+        }
+        .future {
+            background color: green;
+        }
+
 
 *** Back end ***
 
-
-
-   
-
+    GET user input and store in ls
+    click event for time block to save to ls
 */
 
 
