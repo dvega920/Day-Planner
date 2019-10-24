@@ -37,6 +37,8 @@ $(document).ready(function(){
 var currentDate = moment().format('dddd, LL');
 $("#currentDay").text(currentDate);
 
+//updated width of time block span and changed btn text to "SAVE"
+// Consider using fontawesome icon for save feature
 $(".input-group-text").css("width", "100px");
 $(".btn").text("SAVE");
 
