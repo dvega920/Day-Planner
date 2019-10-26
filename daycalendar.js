@@ -1,37 +1,5 @@
 $(document).ready(function () {
 
-    /* Pseudo Code
-    
-    *** Front end ****
-    - Bootstrap jumbotron
-        h1 title 
-        p subtitle (brief description of app)  
-        p to store currentdate
-        hr for separation of header and body
-    - body div id=container
-        - Bootstrap
-            - Time blocks
-                - input text with text area for
-                - addon button append to input text area
-    - CSS stylesheet
-        - create color classes: 
-            .past {
-                background color: gray;
-            }
-            .present {
-                background color: red;
-            }
-            .future {
-                background color: green;
-            }
-    
-    
-    *** Back end ***
-    
-        GET user input and store in ls
-        click event for time block to save to ls
-    */
-
     var x = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 
     //moment.js to put current date on jumbotron
@@ -59,7 +27,7 @@ $(document).ready(function () {
         newDiv.append(newTextArea);
         newTextArea.addClass("form-control")
         newDiv.append(newBtn);
-        newBtn.addClass("btn btn-outline-secondary");
+        newBtn.addClass("btn btn-outline-secondary"); ``
 
     });
 
