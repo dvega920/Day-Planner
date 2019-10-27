@@ -25,6 +25,7 @@ $(document).ready(function () {
         $(".container").append(newDiv);
         $(".container").addClass("mb-5");
         newDiv.addClass("time-block input-group input-group-prepend");
+        newDiv.attr("data-val", index);
         newDiv.append(newSpan);
         newSpan.addClass("input-group-text");
         newSpan.addClass("start-time" + index)
@@ -36,42 +37,29 @@ $(document).ready(function () {
         newDiv.append(newBtn);
         newBtn.addClass("btn btn-outline-secondary");
 
-        for (var i = 9; i < 17; i++) {
-            if (i < currentTime) {
-                newTextInput.addClass("past");
-            } else if (i > currentTime) {
-                newTextInput.addClass("present");
-            } else {
-                newTextInput.addClass("future");
-            }
+        /* END OF FOREACH()*/
 
-        }
-
-    })
-    /* END OF FOREACH()*/
-
-    //Set array to local storage
-    localStorage.setItem("timeblocks", x);
-
-
-    var ls = localStorage.getItem("timeblocks");
-    $(".input-text").text(ls);
-
-    $("button").on("click", function () {
-        event.preventDefault();
-
-        var value = $(".input-text").val();
-        // console.log(value);
-        localStorage.setItem('input', value);
-        localStorage.getItem('input');
     });
 
+    $("button").on("click", function () {
+        var parInput = $(this).parent().attr("data-val")
+        var sibVal = $(this).siblings(".input-text").val();
+        localStorage.setItem(parInput, sibVal);
+        var lsVal = localStorage.getItem(parInput);
+    });
+
+    // console.log(lsVal);
+    // console.log(parInput);
     //updated width of time block span and changed btn text to "SAVE"
     // Consider using fontawesome icon for save feature
     $(".input-group-text").css("width", "100px");
     $("button").text("SAVE"); // update with icon from font-awesome
 
+
 })
+
+
+
 
 
 
